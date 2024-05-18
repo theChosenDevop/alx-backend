@@ -69,7 +69,7 @@ class Server:
 
         dataset = self.dataset()
         data = dataset[start_index:end_index]
-        total_pages = (len(dataset) + page_size -1) // page_size
+        total_pages = (len(dataset) + page_size - 1) // page_size
 
         return {'page_size': page_size,
                 'page': page,
