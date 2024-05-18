@@ -2,7 +2,7 @@
 """1-simple_pagination module"""
 import csv
 import math
-from typing import List, Dict
+from typing import List, Dict, Any
 
 
 def index_range(page: int, page_size: int) -> tuple:
@@ -58,7 +58,7 @@ class Server:
         data = self.dataset()
         return list(data[start_index:end_index])
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """Returns dictionary of meta data"""
         assert type(page) == int
         assert type(page_size) == int
@@ -69,7 +69,7 @@ class Server:
 
         dataset = self.dataset()
         data = dataset[start_index:end_index]
-        total_pages = (len(dataset)) // page_size
+        total_pages = (len(dataset) + page_size -1) // page_size
 
         return {'page_size': page_size,
                 'page': page,
