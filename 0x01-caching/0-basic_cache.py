@@ -4,10 +4,11 @@ from base_caching import BasicCaching
 
 
 class BasicCache(BasicCaching):
-    """ Inherits frm BaseCaching
+    """ Inherits from super BaseCaching
     """
+
     def __init__(self):
-        """ Initialize
+        """ Initialize instance of a class
         """
         super().__init__()
 
