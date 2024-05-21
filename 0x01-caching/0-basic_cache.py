@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """BaseCache module"""
-from base_caching import BasicCaching
+from base_caching import BaseCaching
 
 
-class BasicCache(BasicCaching):
+class BasicCache(BaseCaching):
     """Inherits from super BaseCaching"""
 
     def __init__(self):
