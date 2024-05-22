@@ -21,10 +21,10 @@ class FIFOCache(BaseCaching):
                 print("DISCARD: {}".format(discarded))
                 del self.cache_data[discarded]
 
-            self.cache_data[key] = item
+        self.cache_data[key] = item
 
-            if key not in self.cache_list:
-                self.cache_list.append(key)
+        if key not in self.cache_list:
+            self.cache_list.append(key)
 
     def get(self, key):
         """Returns the value in self.cache_data linked to key"""
