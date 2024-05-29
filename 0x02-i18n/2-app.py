@@ -10,11 +10,11 @@ class Config:
     """Configuration for languages"""
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
-    BABEL_TIMEZONE = "UTC"
+    BABEL_DEFAULT_TIMEZONE = "UTC"
 
 
-babel = Babel(app)
 app.config.from_object(Config)
+babel = Babel(app)
 
 
 @babel.localeselector
