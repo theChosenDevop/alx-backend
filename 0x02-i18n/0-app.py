@@ -11,5 +11,6 @@ def index():
     title = "Welcome to Holberton"
     return render_template('template/index.html', title=title)
 
+
 if __name__ == "__main__":
     app.run(debug=True)
