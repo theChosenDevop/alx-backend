@@ -24,7 +24,7 @@ def get_locale():
 
 
 @app.route('/', slashes_end=False)
-def index():
+def index() -> str:
     """defines index page"""
     title = "Welcome to Holberton"
     render_template("2-index.html", title=title)
