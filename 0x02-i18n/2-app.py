@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """2-app module"""
-from flask_babel import Babel
+from flask_babel import Babel, render_template, request
 from flask import Flask
-from flask import request
 
 app = Flask(__name__)
 
