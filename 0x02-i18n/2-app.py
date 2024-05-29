@@ -27,7 +27,7 @@ def get_locale() -> str:
 def index() -> str:
     """defines index page"""
     title = "Welcome to Holberton"
-    render_template("2-index.html", title=title)
+    return render_template("2-index.html", title=title)
 
 
 if __name__ == "__main__":
